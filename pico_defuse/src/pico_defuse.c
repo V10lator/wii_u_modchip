@@ -9,7 +9,7 @@
 #include "pico_defuse.pio.h"
 
 const uint PIN_DEBUGLED_BASE = 2;   // 8 consecutive pins
-const uint PIN_SERIALOUT_BASE = 18; // 4 consecutive pins tied together
+const uint PIN_SERIALOUT_BASE = 26; // 4 consecutive pins tied together
 
 const uint PIN_DATA_BASE = 10;          // Base pin used for output, 4 consecutive pins are used 
 const uint PIN_NRST = 15;               // Wii U reset
