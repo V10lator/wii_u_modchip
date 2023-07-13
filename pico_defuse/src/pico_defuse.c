@@ -11,7 +11,6 @@
 const uint PIN_DEBUGLED_BASE = 2;   // 8 consecutive pins
 const uint PIN_SERIALOUT_BASE = 18; // 4 consecutive pins tied together
 
-const uint PIN_LED = 25;                // Status LED
 const uint PIN_DATA_BASE = 10;          // Base pin used for output, 4 consecutive pins are used 
 const uint PIN_NRST = 15;               // Wii U reset
 const uint PIN_CLK = 14;                // EXI bus clock line
@@ -198,11 +197,6 @@ void nrst_sense_set(bool is_on)
 void fast_one_time_init()
 {
     stdio_init_all();
-
-    // LED on for now to indicate life or something
-    gpio_init(PIN_LED);
-    gpio_set_dir(PIN_LED, GPIO_OUT);
-    gpio_put(PIN_LED, true);
 
     gpio_init(PIN_NRST);
     gpio_set_dir(PIN_NRST, GPIO_IN);
